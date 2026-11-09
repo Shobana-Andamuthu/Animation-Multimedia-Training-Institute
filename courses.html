@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore industry-focused animation, VFX, graphic design, video editing, and multimedia courses at AniLearn. Gain hands-on skills with expert guidance.">
+  <title>Our Courses | AniLearn Animation &amp; Multimedia Training Institute</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 48 48%27%3E%3Crect width=%2748%27 height=%2748%27 rx=%2714%27 fill=%27%23006838%27/%3E%3Cpath d=%27M18 14L33 24L18 34V14Z%27 fill=%27%23fff%27/%3E%3Ccircle cx=%2733%27 cy=%2715%27 r=%274%27 fill=%27%2334D399%27/%3E%3C/svg%3E">
+
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Shared Desktop & Mobile Navigation Header -->
+  <header class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="index.html" class="navbar-brand" aria-label="AniLearn Home">
+          <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(4, 4)">
+              <rect width="40" height="40" rx="12" fill="#006838"/>
+              <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+              <circle cx="27" cy="13" r="3" fill="#34D399"/>
+            </g>
+            <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+              <tspan fill="#006838">Ani</tspan><tspan fill="currentColor">Learn</tspan>
+            </text>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Links (Strict Order) -->
+        <ul class="nav-links">
+          <!-- 1. Home with Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Home
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <span>Home 1 (Creative Showcase)</span>
+                <span class="dropdown-badge">Live</span>
+              </a>
+              <a href="home-2.html" class="dropdown-item">
+                <span>Home 2 (Studio Immersion)</span>
+                <span class="dropdown-badge">New</span>
+              </a>
+            </div>
+          </li>
+          <!-- 2. About (Immediately after Home) -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <!-- 3. Courses (Active) -->
+          <li class="nav-item">
+            <a href="courses.html" class="nav-link active">Courses</a>
+          </li>
+          <!-- 4. Placements -->
+          <li class="nav-item">
+            <a href="placements.html" class="nav-link">Placements</a>
+          </li>
+          <!-- 6. Contact (Before Dashboard) -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <!-- 7. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Navbar Action Controls -->
+        <div class="navbar-actions">
+          <!-- Theme Toggle Button -->
+          <button type="button" class="btn-icon-control theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+
+          <!-- RTL Direction Toggle Button -->
+          <button type="button" class="btn-icon-control direction-toggle-btn" aria-label="Toggle Text Direction" title="Toggle RTL/LTR">
+            <span class="dir-label" style="font-size:12px; font-weight:700;">RTL</span>
+          </button>
+
+          <!-- Login Button (Strict Dimensions: 42px height) -->
+          <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
+
+          <!-- Primary CTA Button (Strict Dimensions: 42px height) -->
+          <a href="courses.html" class="btn-nav btn-nav-primary">Enroll Now</a>
+
+          <!-- Tablet & Mobile Hamburger Toggle Button -->
+          <button type="button" class="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Tablet & Mobile Navigation Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="navbar-brand">
+        <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:32px;">
+          <g transform="translate(4, 4)">
+            <rect width="40" height="40" rx="12" fill="#006838"/>
+            <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+          </g>
+          <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+            <tspan fill="#006838">Ani</tspan><tspan fill="currentColor">Learn</tspan>
+          </text>
+        </svg>
+      </a>
+      <button type="button" class="mobile-drawer-close btn-icon-control" aria-label="Close Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-item">
+        <a href="javascript:void(0)" class="mobile-nav-link mobile-dropdown-toggle has-dropdown">
+          <span>Home</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="mobile-submenu">
+          <a href="index.html">Home 1 (Creative Showcase)</a>
+          <a href="home-2.html">Home 2 (Studio Immersion)</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="courses.html" class="mobile-nav-link active">Courses</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="placements.html" class="mobile-nav-link">Placements</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="mobile-control-icons"><button type="button" class="btn-icon-control theme-toggle-btn" aria-label="Toggle Theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button type="button" class="btn-icon-control direction-toggle-btn" aria-label="Toggle Direction">
+          <span class="dir-label" style="font-size:12px; font-weight:700;">RTL</span>
+        </button>
+      </div>
+      <div class="mobile-action-buttons">
+        <a href="login.html" class="btn-nav btn-nav-outline" style="width:100%;">Login</a>
+        <a href="courses.html" class="btn-nav btn-nav-primary" style="width:100%;">Enroll Now</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT CONTAINER (EXACTLY 6 SECTIONS) -->
+  <main id="main-content">
+
+    <!-- =========================================================================
+         SECTION 1: STANDARD PAGE HERO (Strict Standard Height: 380px)
+         ========================================================================= -->
+    <section class="page-hero" style="background-image: url('assets/images/pexels-photo-5530447.jpeg');" aria-label="Courses Hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="current">Courses</span>
+          </div>
+          <h1 class="page-hero-title">Our Courses</h1>
+          <p class="page-hero-subtitle">Industry-Focused Programs for a Creative Career. Gain hands-on digital production skills on industry-standard software suites with one-on-one expert faculty mentorship.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: EXPLORE OUR COURSES (6 Cards Matching Exact Reference)
+         ========================================================================= -->
+    <section class="section" aria-label="Explore Our Courses">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Curriculum Catalog</div>
+          <h2 class="section-title">Explore Our <span style="color: var(--primary);">Courses</span></h2>
+          <p class="section-subtitle">Gain hands-on skills with expert guidance. Choose from comprehensive diploma and certificate tracks.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- Card 1: 2D Animation -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-7147737.jpeg" alt="2D Animation Course Thumbnail">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">2D Animation</h3>
+              <p class="course-card-desc">Bring characters to life with 2D animation. Master traditional 12 principles, digital cleanup, and vector puppet rigs.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about 2D Animation">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: 3D Animation -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-28655002.jpeg" alt="3D Animation Course Thumbnail">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">3D Animation</h3>
+              <p class="course-card-desc">Master 3D modeling &amp; animation techniques. Model organic characters, rig full skeletons, and stage cinematic camera layout.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about 3D Animation">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: VFX & Motion Graphics -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-30066061.jpeg" alt="VFX &amp; Motion Graphics Course Thumbnail">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">VFX &amp; Motion Graphics</h3>
+              <p class="course-card-desc">Create stunning visual effects and motion graphics. Build procedural smoke, explosions, roto paint, and broadcast title sequences.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about VFX &amp; Motion Graphics">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Graphic Design -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-7675031.jpeg" alt="Graphic Design Course Thumbnail">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Graphic Design</h3>
+              <p class="course-card-desc">Design with creativity and impact. Create modern brand identities, editorial layouts, vector illustration, and digital marketing assets.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about Graphic Design">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Video Editing -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-31718971.jpeg" alt="Video Editing Course Thumbnail">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Video Editing</h3>
+              <p class="course-card-desc">Craft compelling stories with professional tools. Master non-linear timeline assembly, color grading, multi-track audio, and pacing.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about Video Editing">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Multimedia Design -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-5904081.jpeg" alt="Multimedia Design Course Thumbnail">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Multimedia Design</h3>
+              <p class="course-card-desc">Combine creativity with technology. Develop interactive UI/UX prototypes, virtual reality experiences, and web graphics.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about Multimedia Design">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Game Art & 3D Environment Design (Row 3 - Added per User Request) -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-3913016.jpeg" alt="Game Art &amp; 3D Environment Design Course Thumbnail" style="object-fit:cover;">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Game Art &amp; 3D Environments</h3>
+              <p class="course-card-desc">Build immersive AAA game worlds, modular level environments, realistic foliage, and real-time lighting shaders in Unreal Engine.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about Game Art &amp; 3D Environments">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Virtual Production & In-Camera VFX (Row 3 - Added per User Request) -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-8088372.jpeg" alt="Virtual Production &amp; In-Camera VFX Course Thumbnail" style="object-fit:cover;">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Virtual Production &amp; ICVFX</h3>
+              <p class="course-card-desc">Master real-time LED wall staging, live camera tracking, DMX lighting synchronization, and virtual compositing with Unreal Engine.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about Virtual Production">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Architectural Visualization & Real-Time VR (Row 3 - Added per User Request) -->
+          <div class="course-card">
+            <div class="course-card-thumb">
+              <img src="assets/images/pexels-photo-7562377.jpeg" alt="Architectural Visualization &amp; VR Course Thumbnail" style="object-fit:cover;">
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">ArchViz &amp; Real-Time VR</h3>
+              <p class="course-card-desc">Create photorealistic architectural walkthroughs, interactive interior simulations, VR fly-throughs, and Twinmotion real-time tours.</p>
+              <div class="course-card-footer">
+                <span class="course-link-text">
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+                <a href="contact.html" class="btn-circle-arrow" aria-label="Learn more about Architectural Visualization">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: HOLLYWOOD-GRADE SOFTWARE SUITES (Redesigned Creative Layout)
+         ========================================================================= -->
+    <section class="section section-bg-alt" aria-label="Software &amp; Tools Mastered">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">&#8226; Industry Tech Stack</div>
+          <h2 class="section-title">Hollywood-Grade <span style="color: var(--primary);">Software Suites</span></h2>
+          <p class="section-subtitle">Train on authentic commercial licenses with official software creator accreditation.</p>
+        </div>
+
+        <div class="pipeline-split-grid" style="align-items:stretch;">
+          <!-- Left Column: Software Hub Overview Card -->
+          <div style="background:linear-gradient(135deg, #061c12 0%, #006838 100%); border-radius:24px; padding:36px; color:#ffffff; display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-md);">
+            <div>
+              <span class="badge-status badge-submitted" style="margin-bottom:14px; background:rgba(52,211,153,0.2); color:#34d399; border-color:rgba(52,211,153,0.4);">Official Educational Licenses</span>
+              <h3 style="font-size:1.85rem; font-weight:800; line-height:1.2; margin-bottom:14px; color:#ffffff;">100% Industry Studio Licenses Included</h3>
+              <p style="font-size:14.5px; color:rgba(255,255,255,0.85); line-height:1.65; margin-bottom:20px;">
+                Authentic commercial studio licenses for lab workstations and personal laptops. Learn on the exact tools used by premier global studios.
+              </p>
+              
+              <div style="display:flex; flex-direction:column; gap:10px; font-size:13.5px; color:#e2e8f0; margin-bottom:24px;">
+                <div>&#10003; <strong>Autodesk Maya 2026</strong> &#8212; Unlimited Arnold Batch Rendering</div>
+                <div>&#10003; <strong>SideFX Houdini 20.5</strong> &#8212; Karma XPU &amp; Solaris USD</div>
+                <div>&#10003; <strong>The Foundry NukeX 15</strong> &#8212; Multi-channel EXR &amp; 3D Camera</div>
+                <div>&#10003; <strong>Unreal Engine 5.5</strong> &#8212; Real-time MetaHuman &amp; Lumen</div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn-arrow-badge" style="background:#022414; border:1.5px solid #34d399;">
+              <span>Request Lab Software List</span>
+              <span class="arrow-circle">&#8599;</span>
+            </a>
+          </div>
+
+          <!-- Right Column: 4 Software Suite Cards Grid -->
+          <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;">
+            <!-- Maya -->
+            <div class="facility-card" style="padding:24px; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <span style="font-size:14px; font-weight:800; color:var(--primary); background:var(--primary-light); padding:4px 10px; border-radius:6px;">Autodesk</span>
+                  <span class="badge-status badge-submitted" style="font-size:11px;">v2026</span>
+                </div>
+                <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:6px;">Maya &amp; Arnold</h4>
+                <p style="font-size:13px; color:var(--text-muted); line-height:1.5; margin:0;">Character rigging, facial blendshapes, nCloth, and Arnold production raytracing.</p>
+              </div>
+              <span style="font-size:11px; font-weight:700; color:var(--primary); margin-top:14px;">Studio Certified Curriculum &rarr;</span>
+            </div>
+
+            <!-- Houdini -->
+            <div class="facility-card" style="padding:24px; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <span style="font-size:14px; font-weight:800; color:#dc2626; background:rgba(220,38,38,0.12); padding:4px 10px; border-radius:6px;">SideFX</span>
+                  <span class="badge-status badge-review" style="font-size:11px;">v20.5</span>
+                </div>
+                <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:6px;">Houdini &amp; Solaris</h4>
+                <p style="font-size:13px; color:var(--text-muted); line-height:1.5; margin:0;">Procedural pyro dynamics, fluid simulations, and Karma USD look development.</p>
+              </div>
+              <span style="font-size:11px; font-weight:700; color:#dc2626; margin-top:14px;">VFX Production Pipeline &rarr;</span>
+            </div>
+
+            <!-- Nuke -->
+            <div class="facility-card" style="padding:24px; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <span style="font-size:14px; font-weight:800; color:#7c3aed; background:rgba(124,58,237,0.12); padding:4px 10px; border-radius:6px;">Foundry</span>
+                  <span class="badge-status badge-progress" style="font-size:11px;">v15.1</span>
+                </div>
+                <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:6px;">NukeX Studio</h4>
+                <p style="font-size:13px; color:var(--text-muted); line-height:1.5; margin:0;">32-bit floating point compositing, planar tracking, rotoscoping, and deep comp.</p>
+              </div>
+              <span style="font-size:11px; font-weight:700; color:#7c3aed; margin-top:14px;">Master Compositing &rarr;</span>
+            </div>
+
+            <!-- Unreal Engine -->
+            <div class="facility-card" style="padding:24px; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                  <span style="font-size:14px; font-weight:800; color:#0284c7; background:rgba(2,132,199,0.12); padding:4px 10px; border-radius:6px;">Epic Games</span>
+                  <span class="badge-status badge-paid" style="font-size:11px;">v5.5</span>
+                </div>
+                <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:6px;">Unreal Engine 5.5</h4>
+                <p style="font-size:13px; color:var(--text-muted); line-height:1.5; margin:0;">Real-time Lumen illumination, Nanite meshes, MetaHuman, and virtual sets.</p>
+              </div>
+              <span style="font-size:11px; font-weight:700; color:#0284c7; margin-top:14px;">Virtual Production Track &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: CAPSTONE DEMO REEL & PORTFOLIO DEVELOPMENT
+         ========================================================================= -->
+    <section class="section" aria-label="Capstone Demo Reel Milestones">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Portfolio Mentorship</div>
+          <h2 class="section-title">Your Capstone <span style="color: var(--primary);">Showreel Roadmap</span></h2>
+          <p class="section-subtitle">Every student graduates with a polished demo reel and hosted portfolio.</p>
+        </div>
+
+        <div class="cards-grid-4">
+          <div class="stat-card" style="text-align:left; align-items:flex-start;">
+            <div class="stat-icon"><span>Q1</span></div>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">Foundations &amp; Anatomy</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Master life drawing, form analysis, 3D topology fundamentals, and lighting theory.</p>
+          </div>
+
+          <div class="stat-card" style="text-align:left; align-items:flex-start;">
+            <div class="stat-icon" style="background:rgba(14,165,233,0.15); color:#0284c7;"><span>Q2</span></div>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">Complex Asset Production</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Build high-poly hero characters, mechanical hard-surface props, and textured environments.</p>
+          </div>
+
+          <div class="stat-card" style="text-align:left; align-items:flex-start;">
+            <div class="stat-icon" style="background:rgba(139,92,246,0.15); color:#7c3aed;"><span>Q3</span></div>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">Simulation &amp; Shot Comp</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Execute dynamic cloth, particle sims, multi-pass compositing, and shot dailies.</p>
+          </div>
+
+          <div class="stat-card" style="text-align:left; align-items:flex-start;">
+            <div class="stat-icon" style="background:rgba(245,158,11,0.15); color:#d97706;"><span>Q4</span></div>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">Industry Reel Review</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Critique by studio supervisors, final 4K cut assembly, audio sync, and recruiter pitching.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: DUAL ACCREDITATION & STUDIO CERTIFICATION
+         ========================================================================= -->
+    <section class="section section-bg-alt" aria-label="Accreditation &amp; Certificates">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Recognized Credentials</div>
+          <h2 class="section-title">Industry-Recognized <span style="color: var(--primary);">Certifications</span></h2>
+          <p class="section-subtitle">Earn accredited professional diplomas certified by major software developers and global media councils.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="testimonial-card" style="text-align:center; align-items:center;">
+            <div class="callout-icon" style="margin-bottom:16px;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <h3 style="font-size:1.2rem; margin-bottom:8px;">AniLearn Master Diploma</h3>
+            <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.6;">Comprehensive 1-year production diploma with verified transcript and capstone project review credits.</p>
+          </div>
+
+          <div class="testimonial-card" style="text-align:center; align-items:center;">
+            <div class="callout-icon" style="margin-bottom:16px; background:rgba(2,132,199,0.15); color:#0284c7;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3 style="font-size:1.2rem; margin-bottom:8px;">Autodesk Certified Professional</h3>
+            <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.6;">Official worldwide testing and credentialing in Autodesk Maya 3D modeling and animation workflows.</p>
+          </div>
+
+          <div class="testimonial-card" style="text-align:center; align-items:center;">
+            <div class="callout-icon" style="margin-bottom:16px; background:rgba(220,38,38,0.15); color:#dc2626;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3 style="font-size:1.2rem; margin-bottom:8px;">Unreal Authorized Training</h3>
+            <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.6;">Epic Games validated certificate in Real-Time 3D Environments, Virtual Production, and Blueprints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: "LEARN FROM THE BEST" BANNER CTA (Exact Reference Design)
+         ========================================================================= -->
+    <section class="section-sm" aria-label="Learn from the Best CTA">
+      <div class="container">
+        <div class="cta-banner-curved" style="background: radial-gradient(circle at 80% 20%, #064e2e 0%, #032e1b 60%, #021a0f 100%);">
+          <div class="cta-banner-content">
+            <h2 style="font-size:2.4rem;">Learn from the Best</h2>
+            <p style="font-size:1.05rem; margin-bottom:20px;">
+              Hands-on training from industry experts to build a standout portfolio. Weekend batches and flexible weekday evening schedules available.
+            </p>
+            <div style="display:flex; gap:16px; flex-wrap:wrap;">
+              <a href="contact.html" class="btn-pill btn-primary" style="background:#34d399; color:#022615; border-color:#34d399; font-weight:700;">
+                <span>Download Syllabus &amp; Enroll</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button type="button" class="btn-hero-light" onclick="window.location.href='contact.html'">
+                <span>Schedule Counseling Call</span>
+              </button>
+            </div>
+          </div>
+          <div class="hero-student-card" style="width:280px; height:200px; flex-shrink:0;">
+            <img src="assets/images/pexels-photo-28608024.jpeg" alt="Student Animator at Workstation" style="height:100%; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Public Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:38px; margin-bottom:14px;">
+            <g transform="translate(4, 4)">
+              <rect width="40" height="40" rx="12" fill="#006838"/>
+              <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+              <circle cx="27" cy="13" r="3" fill="#34D399"/>
+            </g>
+            <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+              <tspan fill="#34D399">Ani</tspan><tspan fill="#FFFFFF">Learn</tspan>
+            </text>
+          </svg>
+          <p>Premier Animation &amp; Multimedia Training Institute empowering the next generation of visual storytellers, 3D artists, and VFX supervisors.</p>
+          <div class="footer-socials">
+            <a href="javascript:void(0)" class="social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="javascript:void(0)" class="social-link" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.6c0-.9.3-1.6 1.6-1.6H16.700V4.300C16.400 4.300 15.500 4.200 14.500 4.200c-2.300 0-3.800 1.400-3.800 3.900v2.400H8.200v3h2.500V21h2.800z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <div class="footer-links">
+            <a href="courses.html">3D Animation &amp; Rigging</a>
+            <a href="courses.html">VFX &amp; Compositing</a>
+            <a href="courses.html">2D Character Animation</a>
+            <a href="courses.html">Game Art &amp; Unreal 5</a>
+            <a href="courses.html">Graphic &amp; UI Design</a>
+            <a href="courses.html">Film Video Editing</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="about.html">About Institute</a>
+            <a href="placements.html">Placement Records</a>
+            <a href="index.html#showreel">Student Showreel</a>
+            <a href="dashboard.html">Student Portal</a>
+            <a href="contact.html">Campus Admissions</a>
+            <a href="contact.html">Schedule Studio Tour</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio Campus</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Media City Hub, Studio Boulevard 08, Bengaluru / Hyderabad</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:admissions@anilearn-institute.edu">admissions@anilearn-institute.edu</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+919876543210">+91 98765 43210 / (080) 4123-8899</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AniLearn Animation &amp; Multimedia Training Institute. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)" style="color:#94a3b8;">Privacy Policy</a>
+          <a href="javascript:void(0)" style="color:#94a3b8;">Terms of Training</a>
+          <a href="javascript:void(0)" style="color:#94a3b8;">Security &amp; Lab Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Back-to-Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

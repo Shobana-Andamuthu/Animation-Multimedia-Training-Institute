@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AniLearn Student Portal Login - Access your dashboard, batch schedules, project submissions, and fee tracking.">
+  <title>Student Login | AniLearn Animation &amp; Multimedia Training Institute</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 48 48%27%3E%3Crect width=%2748%27 height=%2748%27 rx=%2714%27 fill=%27%23006838%27/%3E%3Cpath d=%27M18 14L33 24L18 34V14Z%27 fill=%27%23fff%27/%3E%3Ccircle cx=%2733%27 cy=%2715%27 r=%274%27 fill=%27%2334D399%27/%3E%3C/svg%3E">
+
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="login-page-body">
+
+  <!-- MINIMAL NAVBAR (Brand Logo, Theme Toggle, RTL Toggle ONLY - NO main links, NO CTAs, NO hamburger) -->
+  <header class="login-minimal-navbar" role="banner">
+    <a href="index.html" class="navbar-brand" aria-label="AniLearn Home">
+      <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(4, 4)">
+          <rect width="40" height="40" rx="12" fill="#006838"/>
+          <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+          <circle cx="27" cy="13" r="3" fill="#34D399"/>
+        </g>
+        <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+          <tspan fill="#006838">Ani</tspan><tspan fill="currentColor">Learn</tspan>
+        </text>
+      </svg>
+    </a>
+
+    <div class="navbar-actions">
+      <!-- Theme Toggle Button -->
+      <button type="button" class="btn-icon-control theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+
+      <!-- RTL Direction Toggle Button -->
+      <button type="button" class="btn-icon-control direction-toggle-btn" aria-label="Toggle Text Direction" title="Toggle RTL/LTR">
+        <span class="dir-label" style="font-size:12px; font-weight:700;">RTL</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PERFECT 50/50 SPLIT-SCREEN AUTHENTICATION CONTAINER -->
+  <main class="login-split-container" id="main-content">
+    <!-- LEFT 50%: CREATIVE VISUAL PANEL (Exact Reference Layout) -->
+    <div class="login-visual-panel">
+      <div>
+        <div style="display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:#34d399; text-transform:uppercase; margin-bottom:12px;">
+          Student Learning Portal
+        </div>
+        <h2>Welcome Back!</h2>
+        <p>Sign in to continue your creative journey. Access your personalized lecture notes, 3D asset libraries, render farm queue, and batch timetables.</p>
+      </div>
+
+      <div class="login-visual-art">
+        <img src="assets/images/pexels-photo-15558377.jpeg" alt="Student Animator at Workstation">
+      </div>
+    </div>
+
+    <!-- RIGHT 50%: CLEAN AUTHENTICATION FORM PANEL (Exact Reference Layout) -->
+    <div class="login-form-panel">
+      <!-- Tabs: Student Login | Create Account -->
+      <div class="login-tabs">
+        <button type="button" class="login-tab-btn active" id="tab-login" onclick="showTab('login')">Student Login</button>
+        <button type="button" class="login-tab-btn" id="tab-register" onclick="showTab('register')">Create Account</button>
+      </div>
+
+      <!-- Sign In Form Box -->
+      <div id="login-box">
+        <div style="margin-bottom:24px;">
+          <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:6px;">Sign In</h1>
+          <p style="font-size:0.9rem; color:var(--text-muted);">Access your dashboard and continue learning.</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+          <!-- Email Address Input -->
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <div class="form-control-wrapper">
+              <span class="form-control-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </span>
+              <input type="email" class="form-control" value="divya.student@anilearn-institute.edu" placeholder="student@anilearn.edu" required>
+            </div>
+          </div>
+
+          <!-- Password Input with Show/Hide Toggle -->
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <div class="form-control-wrapper">
+              <span class="form-control-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </span>
+              <input type="password" id="login-password" class="form-control" value="DemoPass2026!" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" style="padding-right: 44px;" required>
+              <button type="button" onclick="togglePasswordVisibility()" aria-label="Toggle password visibility" style="position:absolute; right:14px; color:var(--text-muted); cursor:pointer; background:none; border:none; display:flex;">
+                <svg id="eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Remember Me & Forgot Password Row -->
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; font-size:13px;">
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; color:var(--text-body);">
+              <input type="checkbox" checked style="accent-color:var(--primary); width:16px; height:16px;">
+              <span>Remember Me</span>
+            </label>
+            <a href="javascript:void(0)" onclick="alert('Password reset instructions have been sent to your registered student email address.');" style="color:var(--primary); font-weight:700;">Forgot Password?</a>
+          </div>
+
+          <!-- Sign In Button (Navigates to Student Dashboard) -->
+          <button type="submit" class="btn-pill btn-primary" style="width:100%; height:46px; font-size:15px; font-weight:700;">
+            Sign In
+          </button>
+        </form>
+
+        <!-- Social Sign-In Divider -->
+        <div style="display:flex; align-items:center; gap:16px; margin:24px 0;">
+          <div style="flex:1; height:1px; background:var(--border-subtle);"></div>
+          <span style="font-size:12px; color:var(--text-muted); font-weight:600;">or continue with</span>
+          <div style="flex:1; height:1px; background:var(--border-subtle);"></div>
+        </div>
+
+        <!-- Social Auth Options (Google, Microsoft, Apple) -->
+        <div class="social-auth-grid">
+          <button type="button" class="social-auth-btn" onclick="window.location.href='dashboard.html'">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.27v3.15C3.25 21.37 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.27C.46 8.2.005 10.04.005 12s.46 3.8 1.265 5.42l4.01-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.63 1.27 6.58l4.01 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            <span>Google</span>
+          </button>
+
+          <button type="button" class="social-auth-btn" onclick="window.location.href='dashboard.html'">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#f25022" d="M1 1h10v10H1z"/><path fill="#00a4ef" d="M1 13h10v10H1z"/><path fill="#7fba00" d="M13 1h10v10H13z"/><path fill="#ffb900" d="M13 13h10v10H13z"/></svg>
+            <span>Microsoft</span>
+          </button>
+
+          <button type="button" class="social-auth-btn" onclick="window.location.href='dashboard.html'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.89c.65-.8 1.1-1.92.98-3.04-.95.04-2.1.64-2.78 1.44-.61.7-.1.14 1.83.99 2.95 1.05-.03 2.13-.67 2.79-1.35z"/></svg>
+            <span>Apple</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Create Account Form Box (Hidden by Default) -->
+      <div id="register-box" style="display:none;">
+        <div style="margin-bottom:24px;">
+          <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:6px;">Create Account</h1>
+          <p style="font-size:0.9rem; color:var(--text-muted);">Join AniLearn and register your student profile.</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('Account registration request submitted! Check your email for verification.'); showTab('login');">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Divya Ramesh" style="padding-left:16px;" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Student / Personal Email</label>
+            <input type="email" class="form-control" placeholder="divya@example.com" style="padding-left:16px;" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Create Password</label>
+            <input type="password" class="form-control" placeholder="Minimum 8 characters" style="padding-left:16px;" required>
+          </div>
+          <button type="submit" class="btn-pill btn-primary" style="width:100%; height:46px; font-size:15px; font-weight:700;">
+            Register Student Account
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- IMPORTANT: NO FOOTER ON LOGIN PAGE PER UNIVERSAL TEMPLATE SPECIFICATION -->
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function togglePasswordVisibility() {
+      const pass = document.getElementById('login-password');
+      if (pass.type === 'password') {
+        pass.type = 'text';
+      } else {
+        pass.type = 'password';
+      }
+    }
+
+    function showTab(tab) {
+      const loginTab = document.getElementById('tab-login');
+      const regTab = document.getElementById('tab-register');
+      const loginBox = document.getElementById('login-box');
+      const regBox = document.getElementById('register-box');
+
+      if (tab === 'login') {
+        loginTab.classList.add('active');
+        regTab.classList.remove('active');
+        loginBox.style.display = 'block';
+        regBox.style.display = 'none';
+      } else {
+        loginTab.classList.remove('active');
+        regTab.classList.add('active');
+        loginBox.style.display = 'none';
+        regBox.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
+

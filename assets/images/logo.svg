@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <g transform="translate(4, 4)">
+    <rect width="40" height="40" rx="12" fill="#006838"/>
+    <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+    <circle cx="27" cy="13" r="3" fill="#34D399"/>
+  </g>
+  <text x="56" y="32" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="currentColor">
+    <tspan fill="#006838">Ani</tspan><tspan fill="currentColor">Learn</tspan>
+  </text>
+</svg>

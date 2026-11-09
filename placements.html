@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AniLearn Placements - Over 95% placement record with 500+ students placed across 200+ top companies including Google, Microsoft, Infosys, and TATA.">
+  <title>Our Placements | AniLearn Animation &amp; Multimedia Training Institute</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 48 48%27%3E%3Crect width=%2748%27 height=%2748%27 rx=%2714%27 fill=%27%23006838%27/%3E%3Cpath d=%27M18 14L33 24L18 34V14Z%27 fill=%27%23fff%27/%3E%3Ccircle cx=%2733%27 cy=%2715%27 r=%274%27 fill=%27%2334D399%27/%3E%3C/svg%3E">
+
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Shared Desktop & Mobile Navigation Header -->
+  <header class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="index.html" class="navbar-brand" aria-label="AniLearn Home">
+          <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(4, 4)">
+              <rect width="40" height="40" rx="12" fill="#006838"/>
+              <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+              <circle cx="27" cy="13" r="3" fill="#34D399"/>
+            </g>
+            <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+              <tspan fill="#006838">Ani</tspan><tspan fill="currentColor">Learn</tspan>
+            </text>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Links (Strict Order) -->
+        <ul class="nav-links">
+          <!-- 1. Home with Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Home
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <span>Home 1 (Creative Showcase)</span>
+                <span class="dropdown-badge">Live</span>
+              </a>
+              <a href="home-2.html" class="dropdown-item">
+                <span>Home 2 (Studio Immersion)</span>
+                <span class="dropdown-badge">New</span>
+              </a>
+            </div>
+          </li>
+          <!-- 2. About (Immediately after Home) -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <!-- 3. Courses -->
+          <li class="nav-item">
+            <a href="courses.html" class="nav-link">Courses</a>
+          </li>
+          <!-- 4. Placements (Active) -->
+          <li class="nav-item">
+            <a href="placements.html" class="nav-link active">Placements</a>
+          </li>
+          <!-- 6. Contact (Before Dashboard) -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <!-- 7. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Navbar Action Controls -->
+        <div class="navbar-actions">
+          <!-- Theme Toggle Button -->
+          <button type="button" class="btn-icon-control theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+
+          <!-- RTL Direction Toggle Button -->
+          <button type="button" class="btn-icon-control direction-toggle-btn" aria-label="Toggle Text Direction" title="Toggle RTL/LTR">
+            <span class="dir-label" style="font-size:12px; font-weight:700;">RTL</span>
+          </button>
+
+          <!-- Login Button (Strict Dimensions: 42px height) -->
+          <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
+
+          <!-- Primary CTA Button (Strict Dimensions: 42px height) -->
+          <a href="courses.html" class="btn-nav btn-nav-primary">Enroll Now</a>
+
+          <!-- Tablet & Mobile Hamburger Toggle Button -->
+          <button type="button" class="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Tablet & Mobile Navigation Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="navbar-brand">
+        <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:32px;">
+          <g transform="translate(4, 4)">
+            <rect width="40" height="40" rx="12" fill="#006838"/>
+            <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+          </g>
+          <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+            <tspan fill="#006838">Ani</tspan><tspan fill="currentColor">Learn</tspan>
+          </text>
+        </svg>
+      </a>
+      <button type="button" class="mobile-drawer-close btn-icon-control" aria-label="Close Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-item">
+        <a href="javascript:void(0)" class="mobile-nav-link mobile-dropdown-toggle has-dropdown">
+          <span>Home</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="mobile-submenu">
+          <a href="index.html">Home 1 (Creative Showcase)</a>
+          <a href="home-2.html">Home 2 (Studio Immersion)</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="courses.html" class="mobile-nav-link">Courses</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="placements.html" class="mobile-nav-link active">Placements</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer-controls">
+      <div class="mobile-control-icons"><button type="button" class="btn-icon-control theme-toggle-btn" aria-label="Toggle Theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button type="button" class="btn-icon-control direction-toggle-btn" aria-label="Toggle Direction">
+          <span class="dir-label" style="font-size:12px; font-weight:700;">RTL</span>
+        </button>
+      </div>
+      <div class="mobile-action-buttons">
+        <a href="login.html" class="btn-nav btn-nav-outline" style="width:100%;">Login</a>
+        <a href="courses.html" class="btn-nav btn-nav-primary" style="width:100%;">Enroll Now</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT CONTAINER (EXACTLY 6 SECTIONS) -->
+  <main id="main-content">
+
+    <!-- =========================================================================
+         SECTION 1: STANDARD PAGE HERO (Strict Standard Height: 380px)
+         ========================================================================= -->
+    <section class="page-hero" style="background-image: url('assets/images/pexels-photo-8069428.jpeg');" aria-label="Placements Hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="current">Placements</span>
+          </div>
+          <h1 class="page-hero-title">Our Placements</h1>
+          <p class="page-hero-subtitle">Your Success, Our Priority. Connecting passionate digital artists with leading national and international animation studios, gaming corporations, and VFX houses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: OUR HIRING PARTNERS (Direct Reference Layout)
+         ========================================================================= -->
+    <section class="section section-bg-alt" aria-label="Our Hiring Partners">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Recruitment Network</div>
+          <h2 class="section-title">Our <span style="color: var(--primary);">Hiring Partners</span></h2>
+          <p class="section-subtitle">Leading companies trust our talent. Our graduates work on feature blockbusters, gaming titles, and broadcast commercial media.</p>
+        </div>
+
+        <div class="partners-grid" style="grid-template-columns: repeat(4, 1fr); gap: 24px;">
+          <div class="partner-logo-card">
+            <span class="partner-name">TATA</span>
+          </div>
+          <div class="partner-logo-card">
+            <span class="partner-name">Infosys</span>
+          </div>
+          <div class="partner-logo-card">
+            <span class="partner-name">Accenture</span>
+          </div>
+          <div class="partner-logo-card">
+            <span class="partner-name">Google</span>
+          </div>
+          <div class="partner-logo-card">
+            <span class="partner-name">Microsoft</span>
+          </div>
+          <div class="partner-logo-card">
+            <span class="partner-name">Amazon</span>
+          </div>
+          <div class="partner-logo-card">
+            <span class="partner-name">Ubisoft</span>
+          </div>
+          <div class="partner-logo-card">
+            <span class="partner-name">Prime Focus</span>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;">
+<div class="cards-grid-4">
+          <!-- Card 1: 95% Placement Rate -->
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Placement Rate</div>
+          </div>
+
+          <!-- Card 2: 500+ Students Placed -->
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Students Placed</div>
+          </div>
+
+          <!-- Card 3: 200+ Top Companies -->
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="22.01"></line><line x1="15" y1="22" x2="15" y2="22.01"></line><line x1="9" y1="18" x2="9" y2="18.01"></line><line x1="15" y1="18" x2="15" y2="18.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line></svg>
+            </div>
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Top Companies</div>
+          </div>
+
+          <!-- Card 4: 100% Career Support -->
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+            </div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Career Support</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: SUCCESS STORIES (Direct Reference Layout)
+         ========================================================================= -->
+    <section class="section" aria-label="Success Stories">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Alumni Testimonials</div>
+          <h2 class="section-title">Success <span style="color: var(--primary);">Stories</span></h2>
+          <p class="section-subtitle">Real Stories. Real Careers. Discover how AniLearn students transformed their creative passion into high-impact careers.</p>
+        </div>
+
+        <div class="cards-grid-4">
+          <!-- Story 1: Priya S. -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="assets/images/pexels-photo-39513498.jpeg" alt="Priya S.">
+              </div>
+              <div class="testimonial-author">
+                <h4>Priya S.</h4>
+                <span>Animator</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"AniLearn helped me build the skills I needed. I got placed at Infosys as an associate 3D animator right after my graduation reel review!"</p>
+          </div>
+
+          <!-- Story 2: Arun K. -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="assets/images/pexels-photo-30767572.jpeg" alt="Arun K.">
+              </div>
+              <div class="testimonial-author">
+                <h4>Arun K.</h4>
+                <span>VFX Artist</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"The faculty and training are excellent. I'm now working at Google on interactive 3D media and augmented reality pipelines!"</p>
+          </div>
+
+          <!-- Story 3: Sneha M. -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="assets/images/pexels-photo-29852895.jpeg" alt="Sneha M.">
+              </div>
+              <div class="testimonial-author">
+                <h4>Sneha M.</h4>
+                <span>Motion Designer</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"A great place to learn and grow. Highly recommended for anyone wanting serious, career-oriented multimedia training."</p>
+          </div>
+
+          <!-- Story 4: Rohit V. -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="assets/images/pexels-photo-19456424.jpeg" alt="Rohit V.">
+              </div>
+              <div class="testimonial-author">
+                <h4>Rohit V.</h4>
+                <span>Game Environment Artist</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"Thanks to the Unreal Engine 5 production tracks at AniLearn, I cracked the technical test at Ubisoft on my very first attempt!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: CAREER LAUNCHPAD PROCESS (Visual 5-Stage Journey With Images)
+         ========================================================================= -->
+    <section class="section section-bg-alt" aria-label="Placement Assistance Process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Career Launchpad</div>
+          <h2 class="section-title">Our 5-Stage <span style="color: var(--primary);">Placement Journey</span></h2>
+          <p class="section-subtitle">We guide every student from blank canvas to their first studio employment contract.</p>
+        </div>
+
+        <div class="placement-journey-grid">
+          <!-- Stage 1 -->
+          <div class="journey-stage-card">
+            <div class="journey-stage-thumb">
+              <img src="assets/images/pexels-photo-36765631.jpeg" alt="Portfolio Diagnostics">
+              <span class="journey-step-badge">Stage 01</span>
+            </div>
+            <div class="journey-stage-body">
+              <h4>Skill Diagnostics &amp; Audit</h4>
+              <p>Faculty evaluate your scene assets, topology, and lighting to craft your specialized career blueprint.</p>
+              <div class="journey-stage-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Milestone: Skill Matrix</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="journey-stage-card">
+            <div class="journey-stage-thumb">
+              <img src="assets/images/pexels-photo-1188751.jpeg" alt="Showreel Crafting">
+              <span class="journey-step-badge">Stage 02</span>
+            </div>
+            <div class="journey-stage-body">
+              <h4>Studio Showreel Crafting</h4>
+              <p>Build a specialized 60-second industry reel featuring high-impact visual shots and breakdowns.</p>
+              <div class="journey-stage-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Milestone: 4K Demo Reel</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="journey-stage-card">
+            <div class="journey-stage-thumb">
+              <img src="assets/images/pexels-photo-39178037.jpeg" alt="Simulated Studio Tests">
+              <span class="journey-step-badge">Stage 03</span>
+            </div>
+            <div class="journey-stage-body">
+              <h4>Simulated Studio Tests</h4>
+              <p>Undergo timed 48-hour asset challenge examinations simulating real Hollywood studio bench tests.</p>
+              <div class="journey-stage-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Milestone: Studio Clearance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="journey-stage-card">
+            <div class="journey-stage-thumb">
+              <img src="assets/images/pexels-photo-8428059.jpeg" alt="Direct Studio Pitching">
+              <span class="journey-step-badge">Stage 04</span>
+            </div>
+            <div class="journey-stage-body">
+              <h4>Exclusive Recruiter Pitch</h4>
+              <p>Our placement desk presents your verified portfolio directly to HR heads at 200+ partner studios.</p>
+              <div class="journey-stage-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Milestone: Direct Interviews</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="journey-stage-card">
+            <div class="journey-stage-thumb">
+              <img src="assets/images/pexels-photo-4623169.jpeg" alt="Contract Onboarding">
+              <span class="journey-step-badge">Stage 05</span>
+            </div>
+            <div class="journey-stage-body">
+              <h4>Offer &amp; Studio Onboarding</h4>
+              <p>Receive package negotiation guidance and transition smoothly into professional production pipelines.</p>
+              <div class="journey-stage-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Milestone: Signed Offer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: STUDIO CAREER ROLES & COMPENSATION MATRIX (Added per User Request)
+         ========================================================================= -->
+    <section class="section section-bg-alt" aria-label="Studio Roles and Compensation Matrix">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">&#8226; Placement Compensation Tiers</div>
+          <h2 class="section-title">Studio Career Roles &amp; <span style="color: var(--primary);">Salary Packages</span></h2>
+          <p class="section-subtitle">Compensation benchmarks achieved by AniLearn graduates across top studios.</p>
+        </div>
+
+        <!-- 3 KPI Cards -->
+        <div class="placement-kpi-bar">
+          <div class="placement-kpi-card">
+            <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Highest Campus Offer</span>
+            <h3 style="font-size:2rem; font-weight:800; color:var(--primary); margin:6px 0 2px 0;">&#8377;18.5 LPA</h3>
+            <span style="font-size:12px; color:var(--text-muted);">FX Technical Director @ DNEG</span>
+          </div>
+
+          <div class="placement-kpi-card">
+            <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Average Graduate Package</span>
+            <h3 style="font-size:2rem; font-weight:800; color:#059669; margin:6px 0 2px 0;">&#8377;7.8 LPA</h3>
+            <span style="font-size:12px; color:var(--text-muted);">Across all 2026 Diploma Batches</span>
+          </div>
+
+          <div class="placement-kpi-card">
+            <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Minimum Placement Guarantee</span>
+            <h3 style="font-size:2rem; font-weight:800; color:#7c3aed; margin:6px 0 2px 0;">&#8377;4.5 LPA</h3>
+            <span style="font-size:12px; color:var(--text-muted);">Junior Animation Visualizer</span>
+          </div>
+        </div>
+
+        <!-- 4 Role Cards Grid -->
+        <div class="placement-roles-grid">
+          <!-- Role 1 -->
+          <div class="placement-role-card">
+            <div>
+              <span class="badge-status badge-submitted" style="margin-bottom:12px;">High Demand</span>
+              <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:4px;">3D Character Animator</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Prime Focus &#8226; MPC &#8226; Rockstar</p>
+              <div style="font-size:1.4rem; font-weight:800; color:var(--primary); margin-bottom:10px;">&#8377;6.5 - 10.5 LPA</div>
+              <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">Maya character locomotion, facial dialogue sync, weight shifts, and creature performance.</p>
+            </div>
+            <a href="contact.html" class="dash-view-all" style="font-size:12px;">View Prerequisites &rarr;</a>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="placement-role-card">
+            <div>
+              <span class="badge-status badge-paid" style="margin-bottom:12px;">Top Compensation</span>
+              <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:4px;">VFX Dynamics Artist (FX TD)</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">DNEG &#8226; Technicolor &#8226; Framestore</p>
+              <div style="font-size:1.4rem; font-weight:800; color:#059669; margin-bottom:10px;">&#8377;7.5 - 14.0 LPA</div>
+              <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">Houdini Solaris, procedural pyro destruction, fluid dynamics, and Karma USD comp.</p>
+            </div>
+            <a href="contact.html" class="dash-view-all" style="font-size:12px;">View Prerequisites &rarr;</a>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="placement-role-card">
+            <div>
+              <span class="badge-status badge-progress" style="margin-bottom:12px;">Fastest Growing</span>
+              <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:4px;">Real-Time Unreal Tech Artist</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Ubisoft &#8226; EA &#8226; PlayStation</p>
+              <div style="font-size:1.4rem; font-weight:800; color:#0284c7; margin-bottom:10px;">&#8377;8.0 - 18.5 LPA</div>
+              <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">Custom shader networks, Nanite optimization, virtual production LED volume, and MetaHuman.</p>
+            </div>
+            <a href="contact.html" class="dash-view-all" style="font-size:12px;">View Prerequisites &rarr;</a>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="placement-role-card">
+            <div>
+              <span class="badge-status badge-review" style="margin-bottom:12px;">Immediate Openings</span>
+              <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:4px;">Motion Graphic Designer</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Google &#8226; Amazon &#8226; Leo Burnett</p>
+              <div style="font-size:1.4rem; font-weight:800; color:#d97706; margin-bottom:10px;">&#8377;5.5 - 9.0 LPA</div>
+              <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">Broadcast title staging, Cinema 4D 3D style frames, kinetic type, and UI/UX micro-interactions.</p>
+            </div>
+            <a href="contact.html" class="dash-view-all" style="font-size:12px;">View Prerequisites &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: PLACEMENT DRIVE REGISTRATION CTA BANNER
+         ========================================================================= -->
+    <section class="section-sm" aria-label="Placement Registration Call to Action">
+      <div class="container">
+        <div class="cta-banner-curved">
+          <div class="cta-banner-content">
+            <h2>Ready to Launch Your<br><span style="color: #34d399;">Animation Career?</span></h2>
+            <p>Join over 500+ alumni shaping global cinema and gaming. Register for the drive.</p>
+            <div style="margin-top: 24px;">
+              <a href="contact.html" class="btn-pill btn-primary" style="background:#ffffff; color:var(--primary); border-color:#ffffff; font-weight:700;">
+                <span>Register for Upcoming Drive</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-student-card" style="width:280px; height:200px; flex-shrink:0;">
+            <img src="assets/images/pexels-photo-33175648.jpeg" alt="Placement Success Handshake" style="height:100%; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Public Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:38px; margin-bottom:14px;">
+            <g transform="translate(4, 4)">
+              <rect width="40" height="40" rx="12" fill="#006838"/>
+              <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+              <circle cx="27" cy="13" r="3" fill="#34D399"/>
+            </g>
+            <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+              <tspan fill="#34D399">Ani</tspan><tspan fill="#FFFFFF">Learn</tspan>
+            </text>
+          </svg>
+          <p>Premier Animation &amp; Multimedia Training Institute empowering the next generation of visual storytellers, 3D artists, and VFX supervisors.</p>
+          <div class="footer-socials">
+            <a href="javascript:void(0)" class="social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="javascript:void(0)" class="social-link" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.6c0-.9.3-1.6 1.6-1.6H16.700V4.300C16.400 4.300 15.500 4.200 14.500 4.200c-2.300 0-3.800 1.400-3.800 3.900v2.400H8.200v3h2.500V21h2.800z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <div class="footer-links">
+            <a href="courses.html">3D Animation &amp; Rigging</a>
+            <a href="courses.html">VFX &amp; Compositing</a>
+            <a href="courses.html">2D Character Animation</a>
+            <a href="courses.html">Game Art &amp; Unreal 5</a>
+            <a href="courses.html">Graphic &amp; UI Design</a>
+            <a href="courses.html">Film Video Editing</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="about.html">About Institute</a>
+            <a href="placements.html">Placement Records</a>
+            <a href="index.html#showreel">Student Showreel</a>
+            <a href="dashboard.html">Student Portal</a>
+            <a href="contact.html">Campus Admissions</a>
+            <a href="contact.html">Schedule Studio Tour</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio Campus</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Media City Hub, Studio Boulevard 08, Bengaluru / Hyderabad</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:admissions@anilearn-institute.edu">admissions@anilearn-institute.edu</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+919876543210">+91 98765 43210 / (080) 4123-8899</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AniLearn Animation &amp; Multimedia Training Institute. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)" style="color:#94a3b8;">Privacy Policy</a>
+          <a href="javascript:void(0)" style="color:#94a3b8;">Terms of Training</a>
+          <a href="javascript:void(0)" style="color:#94a3b8;">Security &amp; Lab Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Back-to-Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

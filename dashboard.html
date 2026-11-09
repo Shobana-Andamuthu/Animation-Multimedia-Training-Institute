@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AniLearn Student Dashboard - Track your enrolled courses, upcoming batch schedules, project submissions, and fee payments.">
+  <title>Student Dashboard | AniLearn Animation &amp; Multimedia Training Institute</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 48 48%27%3E%3Crect width=%2748%27 height=%2748%27 rx=%2714%27 fill=%27%23006838%27/%3E%3Cpath d=%27M18 14L33 24L18 34V14Z%27 fill=%27%23fff%27/%3E%3Ccircle cx=%2733%27 cy=%2715%27 r=%274%27 fill=%27%2334D399%27/%3E%3C/svg%3E">
+
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- DEDICATED DASHBOARD LAYOUT (Sidebar + Topbar + Content - NO PUBLIC FOOTER) -->
+  <div class="dashboard-wrapper">
+    <!-- DARK GREEN SIDEBAR (Exact Reference Layout) -->
+    <aside class="dashboard-sidebar" id="dash-sidebar" aria-label="Student Sidebar">
+      <!-- Logo in Sidebar -->
+      <a href="index.html" class="navbar-brand" style="margin-bottom:12px;">
+        <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:34px;">
+          <g transform="translate(4, 4)">
+            <rect width="40" height="40" rx="12" fill="#006838"/>
+            <path d="M16 12L28 20L16 28V12Z" fill="#FFFFFF"/>
+            <circle cx="27" cy="13" r="3" fill="#34D399"/>
+          </g>
+          <text x="56" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800">
+            <tspan fill="#34D399">Ani</tspan><tspan fill="#FFFFFF">Learn</tspan>
+          </text>
+        </svg>
+      </a>
+
+      <!-- Student Profile Card in Sidebar -->
+      <div class="sidebar-profile">
+        <div class="sidebar-avatar">
+          <img src="assets/images/pexels-photo-14570936.jpeg" alt="Divya R. Profile Avatar">
+        </div>
+        <div class="sidebar-name">Divya R.</div>
+        <div class="sidebar-role">Student &#8226; Batch 2026</div>
+      </div>
+
+      <!-- Navigation Links Menu (Matching Reference Image with Dynamic Tabs) -->
+      <nav class="sidebar-menu" aria-label="Dashboard Navigation">
+        <a href="#dashboard" class="sidebar-link active" data-tab="dashboard">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#courses" class="sidebar-link" data-tab="courses">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>My Courses</span>
+        </a>
+        <a href="#assignments" class="sidebar-link" data-tab="assignments">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span>Assignments</span>
+        </a>
+        <a href="#fees" class="sidebar-link" data-tab="fees">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          <span>Fee Details</span>
+        </a>
+        <a href="#placements" class="sidebar-link" data-tab="placements">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          <span>Placement Updates</span>
+        </a>
+        <a href="#profile" class="sidebar-link" data-tab="profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Profile</span>
+        </a>
+        <a href="#settings" class="sidebar-link" data-tab="settings">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Logout Action at Bottom of Sidebar -->
+      <div class="sidebar-logout">
+        <a href="login.html" class="sidebar-link" style="color:#ef4444;" title="Sign out of student account">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="dash-sidebar-overlay" id="dash-sidebar-overlay"></div>
+
+    <!-- MAIN DASHBOARD CONTENT AREA -->
+    <div class="dashboard-main">
+      <!-- DEDICATED DASHBOARD TOPBAR (With Logout Button & No Back Link) -->
+      <header class="dashboard-topbar">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <button type="button" class="btn-icon-control dash-menu-btn" id="dash-menu-btn" aria-label="Open dashboard menu" aria-controls="dash-sidebar" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+          <span class="term-label" style="font-size:14px; font-weight:700; color:var(--text-muted);">Term: Fall 2026 &#8226; Studio Section B</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px;">
+          <!-- Theme Toggle (Fixed Full Sun Icon + Moon Icon) -->
+          <button type="button" class="btn-icon-control theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+
+          <!-- RTL Direction Toggle -->
+          <button type="button" class="btn-icon-control direction-toggle-btn" aria-label="Toggle RTL Direction">
+            <span class="dir-label" style="font-size:12px; font-weight:700;">RTL</span>
+          </button>
+
+          <!-- Notifications Bell -->
+          <button type="button" class="btn-icon-control" style="position:relative;" title="Notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span style="position:absolute; top:8px; right:8px; width:8px; height:8px; border-radius:50%; background:#ef4444;"></span>
+          </button>
+
+          <!-- Avatar Mini -->
+          <div style="width:38px; height:38px; border-radius:50%; overflow:hidden; border:2px solid var(--primary);">
+            <span class="avatar-initials" aria-label="Divya R.">DR</span>
+          </div>
+
+          <!-- TOPBAR LOGOUT BUTTON (Requested by User) -->
+          <a href="login.html" class="btn-dashboard-logout" title="Sign out of student account">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- DASHBOARD BODY CONTAINER (Dynamic Tab Views) -->
+      <main class="dashboard-content" id="main-content">
+
+        <!-- ==================== TAB 1: DASHBOARD OVERVIEW ==================== -->
+        <div id="tab-view-dashboard" class="dashboard-tab-view active">
+          <!-- Header Greeting -->
+          <div>
+            <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:4px;">Dashboard</h1>
+            <p style="font-size:0.95rem; color:var(--text-muted);">Welcome back, Divya! Track your progress, manage your creative learning journey.</p>
+          </div>
+
+          <!-- 4 SUMMARY STAT CARDS (Exact Reference Layout) -->
+          <div class="dashboard-stats-grid">
+            <!-- Card 1: Enrolled Courses -->
+            <div class="dash-stat-card" style="cursor:pointer;" data-switch-tab="courses" title="View Enrolled Courses">
+              <div class="dash-stat-icon" style="background:#e8f5ee; color:#006838;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <div class="dash-stat-info">
+                <span>Enrolled Courses</span>
+                <h3>3</h3>
+              </div>
+            </div>
+
+            <!-- Card 2: Pending Assignments -->
+            <div class="dash-stat-card" style="cursor:pointer;" data-switch-tab="assignments" title="View Assignments">
+              <div class="dash-stat-icon" style="background:#fef3c7; color:#d97706;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              </div>
+              <div class="dash-stat-info">
+                <span>Pending Assignments</span>
+                <h3>2</h3>
+              </div>
+            </div>
+
+            <!-- Card 3: Next Batch -->
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background:#ede9fe; color:#7c3aed;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <div class="dash-stat-info">
+                <span>Next Batch</span>
+                <h3 style="font-size:1.25rem;">15 Nov 2026</h3>
+              </div>
+            </div>
+
+            <!-- Card 4: Fee Status -->
+            <div class="dash-stat-card" style="cursor:pointer;" data-switch-tab="fees" title="View Fee Details">
+              <div class="dash-stat-icon" style="background:#d1fae5; color:#059669;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="dash-stat-info">
+                <span>Fee Status</span>
+                <h3 style="color:#059669;">Paid</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- TWO COLUMN PANELS: UPCOMING CLASSES & LATEST UPDATES (Exact Reference Layout with High Contrast View All) -->
+          <div class="dashboard-panels-grid">
+            <!-- Left Panel: Upcoming Classes -->
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3>Upcoming Classes</h3>
+                <a href="#courses" data-switch-tab="courses" class="dash-view-all" title="View All Classes">
+                  <span>View All</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+
+              <div class="dash-list-item">
+                <img src="assets/images/pexels-photo-7147720.jpeg" class="dash-thumb" alt="2D Animation">
+                <div style="flex-grow:1;">
+                  <h4 style="font-size:14px; font-weight:700; margin-bottom:2px;">2D Animation Basics</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">14 Nov 2026 &#8226; 10:00 AM &#8226; Lab 02</p>
+                </div>
+                <span class="badge-status badge-submitted">Confirmed</span>
+              </div>
+
+              <div class="dash-list-item">
+                <img src="assets/images/pexels-photo-8100065.jpeg" class="dash-thumb" alt="VFX Techniques">
+                <div style="flex-grow:1;">
+                  <h4 style="font-size:14px; font-weight:700; margin-bottom:2px;">VFX Techniques &amp; Dynamics</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">16 Nov 2026 &#8226; 02:00 PM &#8226; Studio Lab 05</p>
+                </div>
+                <span class="badge-status badge-submitted">Confirmed</span>
+              </div>
+
+              <div class="dash-list-item">
+                <img src="assets/images/pexels-photo-28771043.jpeg" class="dash-thumb" alt="Motion Graphics">
+                <div style="flex-grow:1;">
+                  <h4 style="font-size:14px; font-weight:700; margin-bottom:2px;">Motion Graphics &amp; Title Staging</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">18 Nov 2026 &#8226; 10:00 AM &#8226; Main Theatre</p>
+                </div>
+                <span class="badge-status badge-submitted">Confirmed</span>
+              </div>
+            </div>
+
+            <!-- Right Panel: Latest Updates -->
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3>Latest Updates</h3>
+                <a href="#placements" data-switch-tab="placements" class="dash-view-all" title="View All Updates">
+                  <span>View All</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+
+              <div class="dash-list-item">
+                <img src="assets/images/pexels-photo-5668842.jpeg" class="dash-thumb" alt="Placement Drive">
+                <div style="flex-grow:1;">
+                  <h4 style="font-size:14px; font-weight:700; margin-bottom:2px;">Placement Drive - 2026</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">Campus recruitment starts next month with 25 studio partners.</p>
+                </div>
+                <span style="font-size:11px; color:var(--text-muted); font-weight:600;">Nov 5, 2026</span>
+              </div>
+
+              <div class="dash-list-item">
+                <img src="assets/images/pexels-photo-7773727.jpeg" class="dash-thumb" alt="Unreal Engine Course">
+                <div style="flex-grow:1;">
+                  <h4 style="font-size:14px; font-weight:700; margin-bottom:2px;">New Course: Unreal Engine 5.5</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">Enhance your virtual production skills with Unreal real-time tools.</p>
+                </div>
+                <span style="font-size:11px; color:var(--text-muted); font-weight:600;">Nov 1, 2026</span>
+              </div>
+
+              <div class="dash-list-item">
+                <img src="assets/images/pexels-photo-9159087.jpeg" class="dash-thumb" alt="Masterclass">
+                <div style="flex-grow:1;">
+                  <h4 style="font-size:14px; font-weight:700; margin-bottom:2px;">Creature Grooming Masterclass</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">Special weekend workshop by Ex-MPC lead artist Rajesh Nair.</p>
+                </div>
+                <span style="font-size:11px; color:var(--text-muted); font-weight:600;">Oct 28, 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Cards to Other Tabs -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+            <div class="dash-panel" style="padding:22px; cursor:pointer;" data-switch-tab="courses">
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:44px; height:44px; border-radius:12px; background:rgba(0,104,56,0.12); color:#006838; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <div>
+                  <h4 style="font-size:15px; font-weight:700; margin-bottom:2px;">My Courses &amp; Labs</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">Access 3 enrolled courses &amp; workstation schedules &rarr;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-panel" style="padding:22px; cursor:pointer;" data-switch-tab="assignments">
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:44px; height:44px; border-radius:12px; background:rgba(245,158,11,0.12); color:#d97706; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                </div>
+                <div>
+                  <h4 style="font-size:15px; font-weight:700; margin-bottom:2px;">Project Submissions</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">Check grades and upload project dailies &rarr;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-panel" style="padding:22px; cursor:pointer;" data-switch-tab="fees">
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:44px; height:44px; border-radius:12px; background:rgba(5,150,105,0.12); color:#059669; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                </div>
+                <div>
+                  <h4 style="font-size:15px; font-weight:700; margin-bottom:2px;">Fee Details &amp; Receipts</h4>
+                  <p style="font-size:12px; color:var(--text-muted);">Review tuition receipts and installment history &rarr;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 2: MY COURSES ==================== -->
+        <div id="tab-view-courses" class="dashboard-tab-view">
+          <div>
+            <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:4px;">My Enrolled Courses</h1>
+            <p style="font-size:0.95rem; color:var(--text-muted);">Active curriculum, studio schedule, and project milestones for Fall 2026.</p>
+          </div>
+
+          <!-- Academic Metrics Header -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:18px;">
+            <div class="dash-panel" style="padding:20px; text-align:center;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Active Courses</span>
+              <h2 style="font-size:1.8rem; font-weight:800; color:var(--primary); margin-top:4px;">3 Programs</h2>
+            </div>
+            <div class="dash-panel" style="padding:20px; text-align:center;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Overall Attendance</span>
+              <h2 style="font-size:1.8rem; font-weight:800; color:#059669; margin-top:4px;">94.2%</h2>
+            </div>
+            <div class="dash-panel" style="padding:20px; text-align:center;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Lab Station</span>
+              <h2 style="font-size:1.8rem; font-weight:800; color:#7c3aed; margin-top:4px;">Lab 02 &#8226; Station #14</h2>
+            </div>
+            <div class="dash-panel" style="padding:20px; text-align:center;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">CGI Render Farm</span>
+              <h2 style="font-size:1.8rem; font-weight:800; color:#d97706; margin-top:4px;">Unlimited Queue</h2>
+            </div>
+          </div>
+
+          <!-- 3 Enrolled Course Cards -->
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <!-- Course 1 -->
+            <div class="dash-panel" style="padding:24px;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+                <div style="display:flex; gap:18px; align-items:center;">
+                  <img src="assets/images/pexels-photo-17683398.jpeg" style="width:72px; height:54px; border-radius:10px; object-fit:cover;" alt="2D Animation">
+                  <div>
+                    <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:4px;">2D Animation Basics &amp; Character Principles</h3>
+                    <p style="font-size:13px; color:var(--text-muted);">Lead Mentor: Rajesh Varma &#8226; Lab 02 Workstation &#8226; Batch Mon-Wed-Fri</p>
+                  </div>
+                </div>
+                <span class="badge-status badge-submitted">In Progress &#8226; 78%</span>
+              </div>
+              <div class="progress-bar-wrap" style="margin-top:18px;">
+                <div class="progress-bar-fill" style="width:78%;"></div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px; flex-wrap:wrap; gap:12px;">
+                <span style="font-size:13px; color:var(--text-muted);">Next Session: <strong>Tomorrow at 10:00 AM (Lab 02)</strong></span>
+                <div style="display:flex; gap:10px;">
+                  <button type="button" class="btn-pill btn-secondary" style="height:36px; padding:0 14px; font-size:12px;" onclick="alert('Launching Autodesk Maya / Toon Boom Harmony Lab Session (Demo)...')">Launch Workstation</button>
+                  <button type="button" class="btn-pill btn-primary" style="height:36px; padding:0 14px; font-size:12px;" onclick="alert('Downloading 2D Animation Course Syllabus (PDF Demo)...')">Download Syllabus</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="dash-panel" style="padding:24px;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+                <div style="display:flex; gap:18px; align-items:center;">
+                  <img src="assets/images/pexels-photo-15713296.jpeg" style="width:72px; height:54px; border-radius:10px; object-fit:cover;" alt="VFX Techniques">
+                  <div>
+                    <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:4px;">VFX Techniques &amp; Dynamics (Houdini &amp; Nuke)</h3>
+                    <p style="font-size:13px; color:var(--text-muted);">Lead Mentor: Ananya Krishnan &#8226; Studio Lab 05 &#8226; Batch Tue-Thu</p>
+                  </div>
+                </div>
+                <span class="badge-status badge-submitted">In Progress &#8226; 65%</span>
+              </div>
+              <div class="progress-bar-wrap" style="margin-top:18px;">
+                <div class="progress-bar-fill" style="width:65%;"></div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px; flex-wrap:wrap; gap:12px;">
+                <span style="font-size:13px; color:var(--text-muted);">Next Session: <strong>Thursday at 02:00 PM (Studio Lab 05)</strong></span>
+                <div style="display:flex; gap:10px;">
+                  <button type="button" class="btn-pill btn-secondary" style="height:36px; padding:0 14px; font-size:12px;" onclick="alert('Accessing Houdini Dailies & pyro simulation passes (Demo)...')">Open Project Dailies</button>
+                  <button type="button" class="btn-pill btn-primary" style="height:36px; padding:0 14px; font-size:12px;" onclick="alert('Accessing SideFX EXR HDRI asset pack (Demo)...')">Asset Library</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="dash-panel" style="padding:24px;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+                <div style="display:flex; gap:18px; align-items:center;">
+                  <img src="assets/images/pexels-photo-27819802.jpeg" style="width:72px; height:54px; border-radius:10px; object-fit:cover;" alt="Motion Graphics">
+                  <div>
+                    <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:4px;">Motion Graphics &amp; Title Staging (Cinema 4D / AE)</h3>
+                    <p style="font-size:13px; color:var(--text-muted);">Lead Mentor: Marcus Thorne &#8226; Main Screening Theatre &#8226; Batch Saturday Special</p>
+                  </div>
+                </div>
+                <span class="badge-status badge-submitted">In Progress &#8226; 88%</span>
+              </div>
+              <div class="progress-bar-wrap" style="margin-top:18px;">
+                <div class="progress-bar-fill" style="width:88%;"></div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px; flex-wrap:wrap; gap:12px;">
+                <span style="font-size:13px; color:var(--text-muted);">Next Session: <strong>Saturday at 10:00 AM (Main Theatre)</strong></span>
+                <div style="display:flex; gap:10px;">
+                  <button type="button" class="btn-pill btn-secondary" style="height:36px; padding:0 14px; font-size:12px;" onclick="alert('Opening Cinema 4D project file repository (Demo)...')">C4D Project Files</button>
+                  <button type="button" class="btn-pill btn-primary" style="height:36px; padding:0 14px; font-size:12px;" onclick="alert('Launching Live Critique Recording Stream (Demo)...')">View Critique Stream</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 3: ASSIGNMENTS / PROJECT SUBMISSIONS ==================== -->
+        <div id="tab-view-assignments" class="dashboard-tab-view">
+          <!-- Header and Submit Action -->
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:4px;">Project Submissions &amp; Dailies</h1>
+              <p style="font-size:0.95rem; color:var(--text-muted);">Review milestone grades and upload new assignment deliverables for supervisor review.</p>
+            </div>
+            <button type="button" class="btn-pill btn-primary" onclick="alert('Submission Modal (Demo): Drag and drop your .ma, .hip, or .mp4 showreel cut. Maximum file size: 2GB per shot submission.');" style="height:42px; font-size:13px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              <span>Submit New Project</span>
+            </button>
+          </div>
+
+          <!-- Assignment KPI Chips -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:16px;">
+            <div class="dash-panel" style="padding:18px;">
+              <span style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Total Tasks</span>
+              <h3 style="font-size:1.5rem; font-weight:800; margin-top:4px;">8 Milestones</h3>
+            </div>
+            <div class="dash-panel" style="padding:18px;">
+              <span style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Graded &amp; Approved</span>
+              <h3 style="font-size:1.5rem; font-weight:800; color:#059669; margin-top:4px;">6 Projects</h3>
+            </div>
+            <div class="dash-panel" style="padding:18px;">
+              <span style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Under Dailies Review</span>
+              <h3 style="font-size:1.5rem; font-weight:800; color:#d97706; margin-top:4px;">1 Pending</h3>
+            </div>
+            <div class="dash-panel" style="padding:18px;">
+              <span style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Average Milestone Score</span>
+              <h3 style="font-size:1.5rem; font-weight:800; color:#006838; margin-top:4px;">95.0% (A+)</h3>
+            </div>
+          </div>
+
+          <!-- Submissions Table (With High Contrast Dark Badges & Clear Scores) -->
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3>Submission History &amp; Supervisor Feedback</h3>
+              <span style="font-size:12px; color:var(--text-muted);">Real-time review updates from animation mentors</span>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Assignment Name</th>
+                    <th>Software</th>
+                    <th>Submitted Date</th>
+                    <th>Status</th>
+                    <th>Grade Score</th>
+                    <th>Supervisor Feedback</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Assignment Name"><strong>Character Acting &amp; Dialogue Sync</strong></td>
+                    <td data-label="Software">Autodesk Maya 2026</td>
+                    <td data-label="Submitted Date">Nov 02, 2026</td>
+                    <td data-label="Status"><span class="badge-status badge-graded">Graded</span></td>
+                    <td data-label="Grade Score"><strong class="grade-score">94 / 100 (A+)</strong></td>
+                    <td data-label="Supervisor Feedback">"Exceptional lip-sync and believable weight shifts in shot 04."</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Assignment Name"><strong>Pyro Destruction &amp; Volume Comp</strong></td>
+                    <td data-label="Software">SideFX Houdini / Nuke</td>
+                    <td data-label="Submitted Date">Nov 05, 2026</td>
+                    <td data-label="Status"><span class="badge-status badge-review">In Review</span></td>
+                    <td data-label="Grade Score"><span style="color:var(--text-muted); font-weight:600;">Pending</span></td>
+                    <td data-label="Supervisor Feedback">Under review by VFX supervisor Ananya Krishnan.</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Assignment Name"><strong>Cinematic Lighting Turnaround</strong></td>
+                    <td data-label="Software">Maya &amp; Arnold EXR</td>
+                    <td data-label="Submitted Date">Due: Nov 20, 2026</td>
+                    <td data-label="Status"><span class="badge-status badge-progress">Work in Progress</span></td>
+                    <td data-label="Grade Score"><span style="color:var(--text-muted);">--</span></td>
+                    <td data-label="Supervisor Feedback">Camera layout approved; proceeding to color grading pass.</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Assignment Name"><strong>Creature Walk Cycle &amp; Heavy Mechanics</strong></td>
+                    <td data-label="Software">Autodesk Maya 2026</td>
+                    <td data-label="Submitted Date">Oct 20, 2026</td>
+                    <td data-label="Status"><span class="badge-status badge-graded">Graded</span></td>
+                    <td data-label="Grade Score"><strong class="grade-score">96 / 100 (A+)</strong></td>
+                    <td data-label="Supervisor Feedback">"Great secondary action on the quadruped tail and solid ground contact."</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 4: FEE DETAILS ==================== -->
+        <div id="tab-view-fees" class="dashboard-tab-view">
+          <div>
+            <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:4px;">Fee Tracking &amp; Payment History</h1>
+            <p style="font-size:0.95rem; color:var(--text-muted);">Transparent tuition records, installment invoices, and verified PDF receipts.</p>
+          </div>
+
+          <!-- 3 Fee Cards -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+            <div class="dash-panel" style="padding:22px;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Total Program Fee</span>
+              <h2 style="font-size:2rem; font-weight:800; color:var(--text-main); margin-top:6px;">&#8377;1,02,000</h2>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">Full 2-Year Professional Animation Program</p>
+            </div>
+            <div class="dash-panel" style="padding:22px;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Total Amount Paid</span>
+              <h2 style="font-size:2rem; font-weight:800; color:#059669; margin-top:6px;">&#8377;1,02,000</h2>
+              <p style="font-size:12px; color:#059669; margin-top:4px;">All 3 installments received and verified</p>
+            </div>
+            <div class="dash-panel" style="padding:22px;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Current Balance Due</span>
+              <h2 style="font-size:2rem; font-weight:800; color:#059669; margin-top:6px;">&#8377;0.00</h2>
+              <span class="badge-status badge-paid" style="margin-top:6px; display:inline-flex;">No Outstanding Dues</span>
+            </div>
+          </div>
+
+          <!-- Fee Ledger Table -->
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <div>
+                <h3>Official Payment Receipts</h3>
+                <p style="font-size:13px; color:var(--text-muted);">Click "Download PDF" to retrieve GST-compliant invoices for tax or reimbursement.</p>
+              </div>
+              <span class="badge-status badge-paid" style="font-size:12px; padding:6px 14px;">Total Balance Due: &#8377;0.00</span>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Transaction ID</th>
+                    <th>Installment Description</th>
+                    <th>Payment Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Transaction ID">#AL-2026-881</td>
+                    <td data-label="Installment Description">Semester 1 Tuition &amp; Lab Enrollment</td>
+                    <td data-label="Payment Date">Aug 14, 2026</td>
+                    <td data-label="Amount"><strong>&#8377;45,000</strong></td>
+                    <td data-label="Status"><span class="badge-status badge-paid">Paid (Online)</span></td>
+                    <td data-label="Receipt"><a href="javascript:void(0)" onclick="alert('Downloading Receipt #AL-2026-881 (PDF Demo)...')" class="dash-view-all">Download PDF</a></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Transaction ID">#AL-2026-882</td>
+                    <td data-label="Installment Description">Render Farm &amp; Software License Fee</td>
+                    <td data-label="Payment Date">Aug 14, 2026</td>
+                    <td data-label="Amount"><strong>&#8377;12,000</strong></td>
+                    <td data-label="Status"><span class="badge-status badge-paid">Paid (Online)</span></td>
+                    <td data-label="Receipt"><a href="javascript:void(0)" onclick="alert('Downloading Receipt #AL-2026-882 (PDF Demo)...')" class="dash-view-all">Download PDF</a></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Transaction ID">#AL-2026-904</td>
+                    <td data-label="Installment Description">Semester 2 Advanced Capstone Fee</td>
+                    <td data-label="Payment Date">Nov 01, 2026</td>
+                    <td data-label="Amount"><strong>&#8377;45,000</strong></td>
+                    <td data-label="Status"><span class="badge-status badge-paid">Paid (NetBanking)</span></td>
+                    <td data-label="Receipt"><a href="javascript:void(0)" onclick="alert('Downloading Receipt #AL-2026-904 (PDF Demo)...')" class="dash-view-all">Download PDF</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 5: PLACEMENT UPDATES ==================== -->
+        <div id="tab-view-placements" class="dashboard-tab-view">
+          <div>
+            <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:4px;">Campus Placements &amp; Studio Drives</h1>
+            <p style="font-size:0.95rem; color:var(--text-muted);">Exclusive recruitment drives, shortlists, and interview preparation for upcoming graduates.</p>
+          </div>
+
+          <!-- Placement Readiness Callout -->
+          <div class="dash-panel" style="padding:22px; background:linear-gradient(135deg, rgba(0,104,56,0.08) 0%, rgba(52,211,153,0.12) 100%); border:1px solid rgba(0,104,56,0.2);">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+              <div>
+                <span class="badge-status badge-submitted" style="margin-bottom:8px;">Campus Placement Status: Active</span>
+                <h3 style="font-size:1.25rem; font-weight:800;">Showreel Vetted: Ready for Studio Interviews</h3>
+                <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">Your 3D character showreel has been rated <strong>Grade A+</strong> by our placement committee. You are eligible for Tier-1 VFX &amp; Gaming drives.</p>
+              </div>
+              <button type="button" class="btn-pill btn-primary" onclick="alert('Booking Mock Interview with Studio Director (Demo)...')" style="height:40px; font-size:13px;">Book Mock Technical Interview</button>
+            </div>
+          </div>
+
+          <!-- 4 Upcoming Studio Drives -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+            <!-- Drive 1: Infosys -->
+            <div class="dash-panel" style="padding:22px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <span style="font-size:18px; font-weight:800; color:#006699;">Infosys</span>
+                <span class="badge-status badge-submitted">Shortlisted</span>
+              </div>
+              <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:4px;">3D Animation Visualizer</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Drive Date: <strong>15 Dec 2026</strong> &#8226; CTC: &#8377;6.5 - 8.2 LPA</p>
+              <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Round 1 Technical Portfolio Screening cleared. Final panel interview scheduled.</p>
+              <button type="button" class="btn-pill btn-secondary" style="width:100%; height:36px; font-size:12px;" onclick="alert('Viewing Infosys Interview Instructions (Demo)...')">View Interview Brief</button>
+            </div>
+
+            <!-- Drive 2: Prime Focus -->
+            <div class="dash-panel" style="padding:22px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <span style="font-size:18px; font-weight:800; color:#c026d3;">Prime Focus</span>
+                <span class="badge-status badge-review">Application In Review</span>
+              </div>
+              <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:4px;">VFX Compositing &amp; Roto Artist</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Drive Date: <strong>22 Dec 2026</strong> &#8226; CTC: &#8377;7.0 - 9.5 LPA</p>
+              <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Showreel submission #PR-2026 submitted to lead supervisor. Awaiting response.</p>
+              <button type="button" class="btn-pill btn-secondary" style="width:100%; height:36px; font-size:12px;" onclick="alert('Checking Application Status with Prime Focus (Demo)...')">Track Status</button>
+            </div>
+
+            <!-- Drive 3: Ubisoft -->
+            <div class="dash-panel" style="padding:22px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <span style="font-size:18px; font-weight:800; color:#0284c7;">Ubisoft</span>
+                <span class="badge-status badge-submitted">Eligible</span>
+              </div>
+              <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:4px;">Junior 3D Gameplay Animator</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Drive Date: <strong>05 Jan 2027</strong> &#8226; CTC: &#8377;8.0 - 11.0 LPA</p>
+              <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Registration open for students with minimum 85% aggregate score in Maya animation.</p>
+              <button type="button" class="btn-pill btn-primary" style="width:100%; height:36px; font-size:12px;" onclick="alert('Registering for Ubisoft Campus Drive (Demo)...')">Register for Drive</button>
+            </div>
+
+            <!-- Drive 4: Google Creative -->
+            <div class="dash-panel" style="padding:22px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <span style="font-size:18px; font-weight:800; color:#ea4335;">Google</span>
+                <span class="badge-status badge-progress">Open Soon</span>
+              </div>
+              <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:4px;">Motion Designer Intern</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Drive Date: <strong>18 Jan 2027</strong> &#8226; Stipend: &#8377;65,000 / mo</p>
+              <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Summer 2027 creative internship opportunity. Portfolio review opens next week.</p>
+              <button type="button" class="btn-pill btn-secondary" style="width:100%; height:36px; font-size:12px;" onclick="alert('Setting Reminder for Google Creative Studio Drive (Demo)...')">Set Drive Reminder</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 6: PROFILE ==================== -->
+        <div id="tab-view-profile" class="dashboard-tab-view">
+          <div>
+            <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:4px;">Student Profile &amp; Credentials</h1>
+            <p style="font-size:0.95rem; color:var(--text-muted);">Manage personal details, showreel portfolio links, and studio station credentials.</p>
+          </div>
+
+          <div class="dash-panel" style="padding:32px;">
+            <div style="display:flex; gap:24px; align-items:center; flex-wrap:wrap; margin-bottom:28px;">
+              <div style="width:90px; height:90px; border-radius:50%; overflow:hidden; border:3px solid var(--primary); flex-shrink:0;">
+                <span class="avatar-initials avatar-initials-lg" aria-label="Divya Ramesh">DR</span>
+              </div>
+              <div>
+                <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:4px;">Divya Ramesh</h2>
+                <p style="font-size:14px; color:var(--text-muted); margin-bottom:8px;">Student ID: <strong>#AL-2026-8841</strong> &#8226; Enrolled: Fall 2026</p>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                  <span class="badge-status badge-submitted">3D Character Animation Major</span>
+                  <span class="badge-status badge-paid">Tuition Paid</span>
+                  <span class="badge-status badge-progress">Workstation: Lab 02 #14</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Details Grid -->
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; border-top:1px solid var(--border-subtle); padding-top:24px;">
+              <div>
+                <label style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Institutional Email</label>
+                <p style="font-size:14px; font-weight:600; margin-top:4px;">divya.ramesh@anilearn.edu.in</p>
+              </div>
+              <div>
+                <label style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Contact Phone</label>
+                <p style="font-size:14px; font-weight:600; margin-top:4px;">+91 98765 43210</p>
+              </div>
+              <div>
+                <label style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Batch &amp; Section</label>
+                <p style="font-size:14px; font-weight:600; margin-top:4px;">Fall 2026 &#8226; Studio Section B</p>
+              </div>
+              <div>
+                <label style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Faculty Mentor</label>
+                <p style="font-size:14px; font-weight:600; margin-top:4px;">Rajesh Varma (Lead Character Animator)</p>
+              </div>
+              <div>
+                <label style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">ArtStation / Showreel URL</label>
+                <p style="font-size:14px; font-weight:600; margin-top:4px;"><a href="javascript:void(0)" onclick="alert('Opening demo portfolio (ArtStation)...')" style="color:var(--primary);">artstation.com/divya_animates &rarr;</a></p>
+              </div>
+              <div>
+                <label style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Hardware Station Specs</label>
+                <p style="font-size:14px; font-weight:600; margin-top:4px;">RTX 4090 &#8226; 64GB RAM &#8226; Wacom Cintiq 24 Pro</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
+              <button type="button" class="btn-pill btn-primary" onclick="alert('Profile Edit Modal (Demo): You can update your bio, contact phone, and portfolio link.');" style="height:40px; font-size:13px;">Edit Profile Info</button>
+              <button type="button" class="btn-pill btn-secondary" onclick="alert('Digital Student ID re-issue requested. Check your email for QR badge.');" style="height:40px; font-size:13px;">Download Digital ID Card</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 7: SETTINGS ==================== -->
+        <div id="tab-view-settings" class="dashboard-tab-view">
+          <div>
+            <h1 style="font-size:1.85rem; font-weight:800; margin-bottom:4px;">Account Settings &amp; Security</h1>
+            <p style="font-size:0.95rem; color:var(--text-muted);">Configure account password, notification preferences, and workstation options.</p>
+          </div>
+
+          <!-- Password Reset Box -->
+          <div class="dash-panel" style="padding:28px;">
+            <div class="dash-panel-header">
+              <h3>Change Password</h3>
+              <span style="font-size:12px; color:var(--text-muted);">Ensure your password is at least 8 characters long</span>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Password successfully updated!');" style="display:flex; flex-direction:column; gap:16px; max-width:480px;">
+              <div>
+                <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Current Password</label>
+                <input type="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required style="width:100%; height:44px; border-radius:10px; border:1px solid var(--border-light); padding:0 14px; background:var(--bg-alt); color:var(--text-main);">
+              </div>
+              <div>
+                <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">New Password</label>
+                <input type="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required style="width:100%; height:44px; border-radius:10px; border:1px solid var(--border-light); padding:0 14px; background:var(--bg-alt); color:var(--text-main);">
+              </div>
+              <div>
+                <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Confirm New Password</label>
+                <input type="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required style="width:100%; height:44px; border-radius:10px; border:1px solid var(--border-light); padding:0 14px; background:var(--bg-alt); color:var(--text-main);">
+              </div>
+              <button type="submit" class="btn-pill btn-primary" style="height:42px; width:fit-content; padding:0 24px; font-size:13px; margin-top:8px;">Update Password</button>
+            </form>
+          </div>
+
+          <!-- Notification Toggles -->
+          <div class="dash-panel" style="padding:28px;">
+            <div class="dash-panel-header">
+              <h3>Notification Preferences</h3>
+              <span style="font-size:12px; color:var(--text-muted);">Manage how AniLearn contacts you about deadlines and placements</span>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <label style="display:flex; align-items:center; gap:12px; cursor:pointer;">
+                <input type="checkbox" checked style="width:18px; height:18px; accent-color:var(--primary);">
+                <span style="font-size:14px; color:var(--text-main);">Email alerts for upcoming assignment submission deadlines</span>
+              </label>
+
+              <label style="display:flex; align-items:center; gap:12px; cursor:pointer;">
+                <input type="checkbox" checked style="width:18px; height:18px; accent-color:var(--primary);">
+                <span style="font-size:14px; color:var(--text-main);">SMS and WhatsApp notifications for new campus placement drives</span>
+              </label>
+
+              <label style="display:flex; align-items:center; gap:12px; cursor:pointer;">
+                <input type="checkbox" checked style="width:18px; height:18px; accent-color:var(--primary);">
+                <span style="font-size:14px; color:var(--text-main);">Immediate email alerts when supervisor publishes shot dailies critique</span>
+              </label>
+
+              <label style="display:flex; align-items:center; gap:12px; cursor:pointer;">
+                <input type="checkbox" style="width:18px; height:18px; accent-color:var(--primary);">
+                <span style="font-size:14px; color:var(--text-main);">Monthly newsletter with industry masterclasses and software release discounts</span>
+              </label>
+            </div>
+
+            <div style="margin-top:20px;">
+              <button type="button" class="btn-pill btn-primary" onclick="alert('Notification settings successfully saved!');" style="height:40px; padding:0 22px; font-size:13px;">Save Preferences</button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- IMPORTANT: NO PUBLIC WEBSITE FOOTER ON DASHBOARD PER UNIVERSAL TEMPLATE SPECIFICATION -->
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
