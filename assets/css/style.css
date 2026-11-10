@@ -1162,15 +1162,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .partner-logo-card img {
-  max-height: 34px;
+  max-height: 36px;
+  max-width: 82%;
   width: auto;
+  height: auto;
   object-fit: contain;
-  filter: grayscale(20%);
-  transition: filter var(--transition-fast);
+  filter: grayscale(15%);
+  transition: all var(--transition-fast);
 }
 
 .partner-logo-card:hover img {
   filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 /* 12. Testimonials Cards */
